@@ -12,6 +12,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SearchItems extends HomePage {
+	
+	//quick and dirty assumes item searched will not return less than 60 items
 
 	List<String> results = new ArrayList<String>();
 
@@ -38,11 +40,4 @@ public class SearchItems extends HomePage {
 		file.close();
 	}
 
-//	public void Items() {
-//		super.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-//		for(WebElement e : items) {
-//			System.out.println(e.findElement(By.className("s-item__title")).getText());
-//			System.out.println(e.findElement(By.className("s-item__price")).getText());
-//		}
-//	}
 }
