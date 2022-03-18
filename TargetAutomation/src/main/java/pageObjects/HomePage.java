@@ -1,5 +1,7 @@
 package pageObjects;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -27,6 +29,7 @@ public class HomePage {
 
 	public void searchResults() {
 		try {
+			FileWriter targetItems = new FileWriter("targetItems.txt");
 			Thread.sleep(60000);
 			List<WebElement> results = driver.findElements(
 					By.xpath("//*[@id=\"pageBodyContainer\"]/div[1]/div/div[4]/div/div[1]/div[2]/div/section/div//div"
@@ -36,10 +39,16 @@ public class HomePage {
 							+ "/div/div/div[2]/div/div/div[2]//div/div/div/span"));
 
 			for (int i = 0; i < results.size(); i++) {
-				System.out.println(results.get(i).getText());
-				System.out.println(prices.get(i).getText());
+				targetItems.write(results.get(i).getText());
+				targetItems.write(System.getProperty( "line.separator" ));
+				targetItems.write(prices.get(i).getText());
+				targetItems.write(System.getProperty( "line.separator" ));
+				targetItems.write(System.getProperty( "line.separator" ));
 			}
+			targetItems.close();
 		} catch (InterruptedException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
