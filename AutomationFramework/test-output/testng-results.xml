@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-03-20T21:37:25 EDT" name="Default suite" finished-at="2022-03-20T21:37:27 EDT" duration-ms="1960">
+    <groups>
+    </groups>
+    <test started-at="2022-03-20T21:37:25 EDT" name="Default test" finished-at="2022-03-20T21:37:27 EDT" duration-ms="1960">
+      <class name="ebayTests.ExpandElementsTest">
+        <test-method signature="register()[pri:0, instance:ebayTests.ExpandElementsTest@3af9aa66]" started-at="2022-03-20T21:37:25 EDT" name="register" finished-at="2022-03-20T21:37:27 EDT" duration-ms="1927" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- register -->
+      </class> <!-- ebayTests.ExpandElementsTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
