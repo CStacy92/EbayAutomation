@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 
 public class AdvancedSearch extends Base{
 	
-	 WebDriver driver = super.initializer();
+	 WebDriver driver = super.getDriver();
 	
 	 //Left Rail "Items"
 	By findItems = By.xpath("//*[@id=\"LeftPanel\"]/div[1]/div/ul/li[1]/a");

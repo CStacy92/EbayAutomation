@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="ebayTests.ExpandElementsTest">
+      <class name="ebayTests.ElementTests">
         <methods>
-          <include name="register"/>
+          <include name="SpotlightTest"/>
         </methods>
-      </class> <!-- ebayTests.ExpandElementsTest -->
+      </class> <!-- ebayTests.ElementTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

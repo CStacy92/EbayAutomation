@@ -1,5 +1,6 @@
 package pageObjects;
 
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -9,7 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Base {
 
-	WebDriver driver;
+	static WebDriver driver;
 	
 	public WebDriver initializer() {
 		System.setProperty("webdriver.chrome.driver",
@@ -19,6 +20,11 @@ public class Base {
 		driver.get("https://www.ebay.com/");
 		return driver;
 	}
+	
+	public WebDriver getDriver() {
+		return driver;
+	}
+	
 
 	// Header items
 	By eBayLogo = By.id("gh-la");
@@ -46,6 +52,9 @@ public class Base {
 	By shopCatHnG = By.xpath("//*[@id=\"gh-sbc\"]/tbody/tr/td[3]/h3[2]/a");
 	By shopCatSportingGoods = By.xpath("//*[@id=\"gh-sbc\"]/tbody/tr/td[1]/h3[3]/a");
 	By shopCatToys = By.xpath("//*[@id=\"gh-sbc\"]/tbody/tr/td[3]/ul[3]/li[2]/a");
+	
+	//search bar category drop down item
+	By searchCatSport = By.xpath("//*[@id=\"gh-cat\"]/option[29]");
 
 	// Footer items (DIFFERENT ONLY ON HOMEPAGE)
 	By footAboutEbay = By.xpath("//*[@id=\"gf-l\"]/li[1]/a");
@@ -71,12 +80,17 @@ public class Base {
 	 By regSubmitBtn = By.id("EMAIL_REG_FORM_SUBMIT");
 	 String registrationPage = "https://signup.ebay.com/pa/crte?siteid=0&co_partnerId=0&UsingSSL=1&rv4=1&ru=https%3A%2F%2Focsnext.ebay.com%2Focs%2Fca%3FpageId%3D6000%26srt%3D0100070000005059b1867791283d9eedfb857ea8f1269aa839a05633229eb7913a93ba547e3e2e894ecd200377b4ae8d73f60a27e2296ed1c6080c9471fffd25ca85c831b78c373d57cb3c704303962efde866a872978e%26reason%3D29%26category%3D500%26decisionId%3D3%26check%3Dtrue%26confirmDecisionId%3D3&signInUrl=https%3A%2F%2Fwww.ebay.com%2Fsignin%3Fsgn%3Dreg%26siteid%3D0%26co_partnerId%3D0%26UsingSSL%3D1%26rv4%3D1%26ru%3Dhttps%253A%252F%252Focsnext.ebay.com%252Focs%252Fca%253FpageId%253D6000%2526srt%253D0100070000005059b1867791283d9eedfb857ea8f1269aa839a05633229eb7913a93ba547e3e2e894ecd200377b4ae8d73f60a27e2296ed1c6080c9471fffd25ca85c831b78c373d57cb3c704303962efde866a872978e%2526reason%253D29%2526category%253D500%2526decisionId%253D3%2526check%253Dtrue%2526confirmDecisionId%253D3";
 	
-	//MOVE
-	List<WebElement> featuredDeals;
-	By spotlightDeal = By.xpath("//*[@id=\"refit-spf-container\"]/div[2]/div[2]/div[1]/div/div/div/a/h3/span/span");
-	By featuredNames = By
-			.xpath("//*[@id=\"refit-spf-container\"]/div[2]/div[2]/div[4]/div//div/div//div/a/h3/span/span");
+	public void driverWait(int i) {
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(i));
+	}
 	
+	public WebElement clickSearchCatSport() {
+		return driver.findElement(searchCatSport);
+	}
+	
+	public WebElement clickSearchCatDropDown() {
+		return driver.findElement(searchCategoriesDropDown);
+	}
 	public WebElement clickEbayLogo() {
 		return driver.findElement(eBayLogo);
 	}
