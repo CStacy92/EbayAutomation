@@ -4,12 +4,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class AdvancedSearch {
+public class AdvancedSearch extends Base{
 	
-	Base b = new Base();
-	WebDriver driver = b.initializer();
+	 WebDriver driver = super.initializer();
 	
-	//Left Rail "Items"
+	 //Left Rail "Items"
 	By findItems = By.xpath("//*[@id=\"LeftPanel\"]/div[1]/div/ul/li[1]/a");
 	By onEbayMotors = By.xpath("//*[@id=\"LeftPanel\"]/div[1]/div/ul/li[2]/a");
 	By bySeller = By.xpath("//*[@id=\"LeftPanel\"]/div[1]/div/ul/li[3]/a");

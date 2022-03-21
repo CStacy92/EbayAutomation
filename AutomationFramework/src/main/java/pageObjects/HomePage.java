@@ -1,95 +1,71 @@
 package pageObjects;
 
-import java.time.Duration;
+
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
 public class HomePage extends Base {
 	WebDriver driver = super.initializer();
 	Actions action = new Actions(driver);
-	PageObjects p = new PageObjects(driver);
 
-	public void closeDriver() {
-		driver.close();
-	}
+	//Home page Nav Bar items
+	By savedLink = By.xpath("/html/body/div[6]/div[1]/ul/li[2]/a");
+	By motorsLink = By.xpath("//*[@id=\"mainContent\"]/div[1]/ul/li[3]");
+	By electronicsLink = By.xpath("//*[@id=\"mainContent\"]/div[1]/ul/li[4]");
+	By collectiblesLink = By.xpath("//*[@id=\"mainContent\"]/div[1]/ul/li[5]");
+	By homeAndGardenLink = By.xpath("//*[@id=\"mainContent\"]/div[1]/ul/li[6]");
+	By clothingLink = By.xpath("//*[@id=\"mainContent\"]/div[1]/ul/li[7]");
+	By toysLink = By.xpath("//*[@id=\"mainContent\"]/div[1]/ul/li[8]");
+	By sportingGoods = By.xpath("//*[@id=\"mainContent\"]/div[1]/ul/li[9]");
+	By businessAndIndustrial = By.xpath("//*[@id=\"mainContent\"]/div[1]/ul/li[10]");
+	By moreDropdown = By.xpath("//*[@id=\"mainContent\"]/div[1]/ul/li[13]");
+	By motorDeals = By.xpath("//*[@id=\"mainContent\"]/div[1]/ul/li[3]/div[2]/div[1]/nav[1]/ul/li[6]/a");
+	By booksMoviesAndMusicCat = By.xpath("//*[@id=\"gh-sbc\"]/tbody/tr/td[3]/ul[3]/li[1]/a");
 	
-	public void driverWait(int numSeconds) {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(numSeconds));
-	}
-	
-	
-//Nav Methods Originally Hovered to expand Menu but wasn't visible without adding a sleep command for user visibility... which kind of defeats
-// the purpose of writing a code if I have to watch and see if the menu pops up...
-	
-	public void motorsAndFashion() {
-		p.clickMotors().click();
-		p.clickEbayLogo().click();
-		p.clickDailyDeals().click();
-		p.fashionTab().click();
-	}
 
-	public void fashionAndElectronics() {
-		p.clickDailyDeals().click();
-		p.fashionTab().click();
-		p.clickShopByCategory().click();
-		p.clickShopCatElec().click();
+	public WebElement clickBooksMoviesAndMusic() {
+		return driver.findElement(booksMoviesAndMusicCat);
 	}
 	
-	public void electronicsAndCollectibles() {
-		p.clickEbayLogo().click();
-		p.clickElectronics().click();
-		p.clickShopByCategory().click();
-		p.clickShopCatCollectibles().click();
+	public WebElement clickMotorDeals() {
+		return driver.findElement(motorDeals);
+	}
+	public WebElement clickBusiness() {
+		return driver.findElement(businessAndIndustrial);
 	}
 	
-	public void HnGAndCollectibles() {
-		p.clickEbayLogo().click();
-		p.clickHomeAndGarden().click();
-		p.clickEbayLogo().click();
-		p.clickCollectibles().click();
+	public WebElement clickSportingGoods() {
+		return driver.findElement(sportingGoods);
 	}
 	
-	public void HnGAndSportingGoods() {
-		p.clickShopByCategory().click();
-		p.clickShopCatSport().click();
-		p.clickShopByCategory().click();
-		p.clickShopCatHnG().click();
+	public WebElement clickToys() {
+		return driver.findElement(toysLink);
 	}
 	
-	public void sportingGoodsAndToys() {
-		p.clickShopByCategory().click();
-		p.clickShopCatToys().click();
-		p.clickShopByCategory().click();
-		p.clickShopCatSport().click();
+	public WebElement clickClothing() {
+		return driver.findElement(clothingLink);
 	}
 	
-	public void toysAndBusiness() {
-		p.clickShopByCategory().click();
-		p.clickShopCatToys().click();
-		p.clickEbayLogo().click();
-		p.clickBusiness().click();
+	public WebElement clickHomeAndGarden() {
+		return driver.findElement(homeAndGardenLink);
 	}
 	
-	public void businessAndMusic() {
-		p.clickEbayLogo().click();
-		p.clickBusiness().click();
-		p.clickShopByCategory().click();
-		p.clickBooksMoviesAndMusic().click();
+	public WebElement clickCollectibles() {
+		return driver.findElement(collectiblesLink);
 	}
 	
-	public void musicAndDeals() {
-		p.clickEbayLogo().click();
-		p.clickShopByCategory().click();
-		p.clickBooksMoviesAndMusic().click();
-		p.clickEbayLogo().click();
-		p.clickDailyDeals().click();
+	public WebElement clickElectronics() {
+		return driver.findElement(electronicsLink);
 	}
 	
-	public void clickSpotlight() {
-		p.clickDailyDeals();
-		p.clickSpotlighDeal().click();
+	public WebElement clickMotors() {
+		return driver.findElement(motorsLink);
 	}
-
+	
+	public WebElement clickSaved() {
+		return driver.findElement(savedLink);
+	}
 }

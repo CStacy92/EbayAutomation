@@ -14,7 +14,7 @@ public class HomePageTest {
 	@Test
 	public void goToSignInPage() throws InterruptedException {
 		hp.clickBellIcon().click();
-		hp.clickSignInLink().click();
+		hp.bellSignInLink().click();
 		Assert.assertEquals(driver.getTitle(), "Security Measure");
 
 	}
