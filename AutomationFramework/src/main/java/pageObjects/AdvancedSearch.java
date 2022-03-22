@@ -41,6 +41,26 @@ public class AdvancedSearch extends Base{
 		return driver.findElement(byItemNumber);
 	}
 	
+	public WebElement clickKeywordTextBar() {
+		return driver.findElement(keywordTextBar);
+	}
+	
+	public WebElement clickKeywordOptionsMenu() {
+		return driver.findElement(keywordOptionsMenu);
+	}
+	
+	public WebElement clickFindItemsBtn() {
+		return driver.findElement(findItemsSearchBtn);
+	}
+	
+	public WebElement clickCategoriesMenu() {
+		return driver.findElement(categoriesMenu);
+	}
+	
+	public WebElement clickExcludeWords() {
+		return driver.findElement(excludeWordsBar);
+	}
+	
 	public WebElement clickItemsInStores() {
 		return driver.findElement(itemsInStores);
 	}

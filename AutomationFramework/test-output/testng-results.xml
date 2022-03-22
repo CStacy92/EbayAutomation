@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="4" failed="1" skipped="0">
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-03-21T17:16:20 EDT" name="Default suite" finished-at="2022-03-21T17:16:38 EDT" duration-ms="17840">
+  <suite started-at="2022-03-22T00:38:27 EDT" name="Default suite" finished-at="2022-03-22T00:38:39 EDT" duration-ms="12609">
     <groups>
     </groups>
-    <test started-at="2022-03-21T17:16:20 EDT" name="Default test" finished-at="2022-03-21T17:16:38 EDT" duration-ms="17840">
-      <class name="ebayTests.ElementTests">
-        <test-method signature="SpotlightTest()[pri:0, instance:ebayTests.ElementTests@6826c41e]" started-at="2022-03-21T17:16:20 EDT" name="SpotlightTest" finished-at="2022-03-21T17:16:20 EDT" duration-ms="61" status="FAIL">
+    <test started-at="2022-03-22T00:38:27 EDT" name="Default test" finished-at="2022-03-22T00:38:39 EDT" duration-ms="12609">
+      <class name="ebayTests.ProductsPageTests">
+        <test-method signature="enterMinAndMax()[pri:0, instance:ebayTests.ProductsPageTests@3f3c7bdb]" started-at="2022-03-22T00:38:27 EDT" name="enterMinAndMax" finished-at="2022-03-22T00:38:37 EDT" duration-ms="10047" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="refit-spf-container"]/div[2]/div[2]/div[1]/div/div/div/a/h3/span/span"}
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="s0-62-10-0-1-2-6-0-6[3]-0-textrange-beginParamValue-textbox"]"}
   (Session info: chrome=99.0.4844.74)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.1.1', revision: 'e8fcc2cecf'
 System info: host: 'DESKTOP-PB18A7O', ip: '192.168.0.241', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3cb725bbf2b3041f155867b10bcf0c4a, findElement {using=xpath, value=//*[@id="refit-spf-container"]/div[2]/div[2]/div[1]/div/div/div/a/h3/span/span}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.74, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\catni\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58189}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58189/devtoo..., se:cdpVersion: 99.0.4844.74, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 3cb725bbf2b3041f155867b10bcf0c4a]]>
+Command: [f857027ef30da5b2598f461ce6545c47, findElement {using=xpath, value=//*[@id="s0-62-10-0-1-2-6-0-6[3]-0-textrange-beginParamValue-textbox"]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.74, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\catni\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:49970}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:49970/devtoo..., se:cdpVersion: 99.0.4844.74, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f857027ef30da5b2598f461ce6545c47]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="refit-spf-container"]/div[2]/div[2]/div[1]/div/div/div/a/h3/span/span"}
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="s0-62-10-0-1-2-6-0-6[3]-0-textrange-beginParamValue-textbox"]"}
   (Session info: chrome=99.0.4844.74)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.1.1', revision: 'e8fcc2cecf'
 System info: host: 'DESKTOP-PB18A7O', ip: '192.168.0.241', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3cb725bbf2b3041f155867b10bcf0c4a, findElement {using=xpath, value=//*[@id="refit-spf-container"]/div[2]/div[2]/div[1]/div/div/div/a/h3/span/span}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.74, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\catni\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58189}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58189/devtoo..., se:cdpVersion: 99.0.4844.74, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 3cb725bbf2b3041f155867b10bcf0c4a
+Command: [f857027ef30da5b2598f461ce6545c47, findElement {using=xpath, value=//*[@id="s0-62-10-0-1-2-6-0-6[3]-0-textrange-beginParamValue-textbox"]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.74, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\catni\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:49970}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:49970/devtoo..., se:cdpVersion: 99.0.4844.74, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f857027ef30da5b2598f461ce6545c47
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -46,8 +46,8 @@ at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(Elemen
 at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
-at pageObjects.DailyDealsPage.clickSpotlight(DailyDealsPage.java:23)
-at ebayTests.ElementTests.SpotlightTest(ElementTests.java:75)
+at pageObjects.ProductsPage.enterMinPrice(ProductsPage.java:43)
+at ebayTests.ProductsPageTests.enterMinAndMax(ProductsPageTests.java:39)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -81,24 +81,12 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SpotlightTest -->
-        <test-method signature="fashionAndElectronics()[pri:0, instance:ebayTests.ElementTests@6826c41e]" started-at="2022-03-21T17:16:20 EDT" name="fashionAndElectronics" finished-at="2022-03-21T17:16:25 EDT" duration-ms="5324" status="PASS">
+        </test-method> <!-- enterMinAndMax -->
+        <test-method signature="searchAndRefinePrice()[pri:0, instance:ebayTests.ProductsPageTests@3f3c7bdb]" started-at="2022-03-22T00:38:37 EDT" name="searchAndRefinePrice" finished-at="2022-03-22T00:38:39 EDT" duration-ms="2532" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- fashionAndElectronics -->
-        <test-method signature="hgAndCollectibles()[pri:0, instance:ebayTests.ElementTests@6826c41e]" started-at="2022-03-21T17:16:25 EDT" name="hgAndCollectibles" finished-at="2022-03-21T17:16:28 EDT" duration-ms="2975" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- hgAndCollectibles -->
-        <test-method signature="hgAndSportingGoods()[pri:0, instance:ebayTests.ElementTests@6826c41e]" started-at="2022-03-21T17:16:28 EDT" name="hgAndSportingGoods" finished-at="2022-03-21T17:16:33 EDT" duration-ms="4695" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- hgAndSportingGoods -->
-        <test-method signature="motorsAndFashion()[pri:0, instance:ebayTests.ElementTests@6826c41e]" started-at="2022-03-21T17:16:33 EDT" name="motorsAndFashion" finished-at="2022-03-21T17:16:38 EDT" duration-ms="4752" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- motorsAndFashion -->
-      </class> <!-- ebayTests.ElementTests -->
+        </test-method> <!-- searchAndRefinePrice -->
+      </class> <!-- ebayTests.ProductsPageTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
