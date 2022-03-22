@@ -25,6 +25,10 @@ public class Base {
 		return driver;
 	}
 	
+	public void closeDriver() {
+		driver.close();
+	}
+	
 
 	// Header items
 	By eBayLogo = By.id("gh-la");

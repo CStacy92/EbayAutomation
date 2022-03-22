@@ -9,7 +9,6 @@ import org.openqa.selenium.interactions.Actions;
 
 public class HomePage extends Base {
 	WebDriver driver = super.initializer();
-	Actions action = new Actions(driver);
 
 	//Home page Nav Bar items
 	By savedLink = By.xpath("/html/body/div[6]/div[1]/ul/li[2]/a");
