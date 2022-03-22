@@ -1,7 +1,7 @@
 package pageObjects;
 
-import java.io.FileWriter;
-import java.io.IOException;
+
+
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -14,6 +14,10 @@ public class HomePage {
 
 	By searchBar = By.id("search");
 	By submitBtn = By.xpath("/html/body/div[2]/div[2]/nav/div[2]/form/button");
+	By results = By.xpath("//*[@id=\"pageBodyContainer\"]/div[1]/div/div[4]/div/div[1]/div[2]/div/section/div//div"
+			+ "/div/div/div[2]/div/div/div[1]/div[1]/a");
+	By prices = By.xpath("//*[@id=\"pageBodyContainer\"]/div[1]/div/div[4]/div/div[1]/div[2]/div/section/div//div"
+			+ "/div/div/div[2]/div/div/div[2]//div/div/div/span");
 
 	public HomePage(WebDriver driver) {
 		this.driver = driver;
@@ -27,29 +31,12 @@ public class HomePage {
 		return driver.findElement(submitBtn);
 	}
 
-	public void searchResults() {
-		try {
-			FileWriter targetItems = new FileWriter("targetItems.txt");
-			Thread.sleep(60000);
-			List<WebElement> results = driver.findElements(
-					By.xpath("//*[@id=\"pageBodyContainer\"]/div[1]/div/div[4]/div/div[1]/div[2]/div/section/div//div"
-							+ "/div/div/div[2]/div/div/div[1]/div[1]/a"));
-			List<WebElement> prices = driver.findElements(
-					By.xpath("//*[@id=\"pageBodyContainer\"]/div[1]/div/div[4]/div/div[1]/div[2]/div/section/div//div"
-							+ "/div/div/div[2]/div/div/div[2]//div/div/div/span"));
-
-			for (int i = 0; i < results.size(); i++) {
-				targetItems.write(results.get(i).getText());
-				targetItems.write(System.getProperty( "line.separator" ));
-				targetItems.write(prices.get(i).getText());
-				targetItems.write(System.getProperty( "line.separator" ));
-				targetItems.write(System.getProperty( "line.separator" ));
-			}
-			targetItems.close();
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+	public List<WebElement> results() {
+		return driver.findElements(results);
 	}
+
+	public List<WebElement> prices() {
+		return driver.findElements(prices);
+	}
+
 }
