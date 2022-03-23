@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 
 public class AdvancedSearch extends Base{
 	
-	 WebDriver driver = super.getDriver();
+	 WebDriver driver = super.initializer();
 	
 	 //Left Rail "Items"
 	By findItems = By.xpath("//*[@id=\"LeftPanel\"]/div[1]/div/ul/li[1]/a");
@@ -18,12 +18,29 @@ public class AdvancedSearch extends Base{
 	By keywordOptionsMenu = By.id("_in_kw");
 	By excludeWordsBar = By.id("_ex_kw");
 	By categoriesMenu = By.id("e1-1");
-	By findItemsSearchBtn = By.id("searchBtnUpperNoScript");
+	By findItemsSearchBtn = By.xpath("//*[@id=\"adv_search_from\"]/fieldset[1]/div[3]/button");
 	
 	
 	//Left Rail "Stores"
 	By itemsInStores = By.xpath("//*[@id=\"LeftPanel\"]/div[2]/div/ul/li[1]/a");
 	By findStores = By.xpath("//*[@id=\"LeftPanel\"]/div[2]/div/ul/li[2]/a");
+	
+	//Search Including CheckBoxes
+	By titleAndDescript = By.xpath("//*[@id=\"LH_TitleDesc\"]");
+	By completedListings = By.xpath("//*[@id=\"adv_search_from\"]/fieldset[2]/label[2]");
+	By soldListings = By.xpath("//*[@id=\"adv_search_from\"]/fieldset[2]/label[2]");
+	
+	public WebElement clickTitleAndDescript() {
+		return driver.findElement(titleAndDescript);
+	}
+	
+	public WebElement clickCompletedListings() {
+		return driver.findElement(completedListings);
+	}
+	
+	public WebElement clickSoldListings() {
+		return driver.findElement(soldListings);
+	}
 	
 	public WebElement clickFindItems() {
 		return driver.findElement(findItems);

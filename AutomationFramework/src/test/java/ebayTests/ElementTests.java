@@ -1,6 +1,8 @@
 package ebayTests;
 
-import org.testng.annotations.Test;
+
+
+import org.junit.Test;
 
 import pageObjects.DailyDealsPage;
 import pageObjects.HomePage;
