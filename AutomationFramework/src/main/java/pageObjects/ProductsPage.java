@@ -8,12 +8,10 @@ import org.openqa.selenium.WebElement;
 
 public class ProductsPage extends Base{
 
-//          - Price, Type Functionality
-//          - Check Product Description, etc.
-//          - Buy It Now functionality
 	WebDriver driver = super.initializer();
 	
-	By firstElement = By.xpath("//*[@id=\"srp-river-results\"]/ul/li[1]/div/div[2]/div[3]/div[1]/span");
+	By firstElementName = By.xpath("//*[@id=\"srp-river-results\"]/ul/li[1]/div/div[2]/a/h3");
+	By firstElementPrice = By.xpath("//*[@id=\"srp-river-results\"]/ul/li[1]/div/div[2]/div[3]/div[1]/span");
 	By allListTab = By.xpath("//*[@id=\"s0-62-10-5-3[1]\"]/div[2]/div[1]/div/ul/li[1]/span");
 	By acceptsOffersTab = By.xpath("//*[@id=\"s0-62-10-5-3[1]\"]/div[2]/div[1]/div/ul/li[2]/a");
 	By auctionTab = By.xpath("//*[@id=\"s0-62-10-5-3[1]\"]/div[2]/div[1]/div/ul/li[3]/a");
@@ -31,8 +29,12 @@ public class ProductsPage extends Base{
 	
 	By conditionOptions = By.id("x-refine__group__2");
 	
-	public WebElement getFirst() {
-		return driver.findElement(firstElement);
+	public WebElement getFirstItem() {
+		return driver.findElement(firstElementName);
+	}
+	
+	public WebElement getFirstPrice() {
+		return driver.findElement(firstElementPrice);
 	}
 	
 	public WebElement clickPriceRangeBtn() {
