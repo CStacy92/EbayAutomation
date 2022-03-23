@@ -14,36 +14,41 @@ public class ElementTests {
 	@Test
 	public void motorsAndFashion() {
 		hp.driverWait(10);
-		hp.clickEbayLogo().click();
 		hp.clickMotors().click();
 		hp.clickDailyDeals().click();
 		dd.clickFashionTab().click();
+		hp.closeDriver();
 	}
 	
 	@Test
 	public void fashionAndElectronics() {
-		hp.clickEbayLogo().click();
+		hp.driverWait(10);
 		hp.clickElectronics().click();
 		hp.clickDailyDeals().click();
 		dd.clickFashionTab().click();
+		hp.closeDriver();
 	}
 	
 	@Test
 	public void hgAndCollectibles() {
+		hp.driverWait(10);
 		hp.clickShopByCategory().click();
 		hp.clickShopCatHnG().click();
 		hp.clickShopByCategory().click();
 		hp.clickShopCatCollectibles().click();
+		hp.closeDriver();
 	}
 	
 	@Test
 	public void hgAndSportingGoods() {
+		hp.driverWait(10);
 		hp.clickShopByCategory().click();
 		hp.clickShopCatHnG().click();
 		hp.searchTextBox().sendKeys("Sporting Goods");
 		hp.clickSearchCatDropDown().click();
 		hp.clickSearchCatSport().click();
 		hp.clickSearchBtn().click();
+		hp.closeDriver();
 	}
 
 //		REMAINING CLICK TESTS
